@@ -20,6 +20,7 @@ ENV APPLICATION_USER ktor
 # Then we add the user, create the /app folder and give permissions to our user.
 RUN adduser -disabled-password -gecos '' $APPLICATION_USER
 RUN mkdir /app
+WORKDIR /app
 RUN chown -R $APPLICATION_USER /app
 COPY ./start.sh ./start.sh
 RUN chmod o=rx ./start.sh

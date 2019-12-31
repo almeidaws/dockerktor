@@ -8,5 +8,5 @@ java \
   -XX:+UseG1GC \
   -XX:MaxGCPauseMillis=100 \
   -XX:+UseStringDeduplication \
-  -jar
+  -jar \
   $1
